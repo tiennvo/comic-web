@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 16, 2024 lúc 09:58 PM
+-- Thời gian đã tạo: Th12 15, 2024 lúc 05:38 PM
 -- Phiên bản máy phục vụ: 10.4.10-MariaDB
 -- Phiên bản PHP: 7.1.33
 
@@ -41,7 +41,6 @@ CREATE TABLE `qq_authors` (
 INSERT INTO `qq_authors` (`Id`, `Name`, `NameEncode`) VALUES
 (1828, 'Fujiko F. Fujio', 'fujiko-f-fujio'),
 (1830, 'Tiếnn Võ', 'tienn-vo'),
-(1831, 'Võ Trần Tiến', 'vo-tran-tien'),
 (1832, 'Unknown', 'unknown');
 
 -- --------------------------------------------------------
@@ -73,7 +72,8 @@ INSERT INTO `qq_chapter` (`Id`, `Name`, `Title`, `Path`, `Summary`, `DateUpload`
 (129, 'Chương 1', '', 'upload/chap/manga/7-vien-ngoc-rong/1/1.png', '', '2024-11-17 03:01:27', 42),
 (130, 'Chương 2', '', 'upload/chap/manga/7-vien-ngoc-rong/2/1.png', '', '2024-11-17 03:12:53', 42),
 (131, 'Chương 3', 'Dragon', 'upload/chap/manga/7-vien-ngoc-rong/3/8 (1).png,upload/chap/manga/7-vien-ngoc-rong/3/7 (1).png,upload/chap/manga/7-vien-ngoc-rong/3/6 (1).png,upload/chap/manga/7-vien-ngoc-rong/3/4 (1).png,upload/chap/manga/7-vien-ngoc-rong/3/5 (1).png,upload/chap/manga/7-vien-ngoc-rong/3/2 (1).png,upload/chap/manga/7-vien-ngoc-rong/3/3 (1).png', '', '2024-11-17 03:42:10', 42),
-(132, 'Chương 2', '', 'upload/chap/manga/naruto/2/1.png,upload/chap/manga/naruto/2/naruto.jpg', '', '2024-11-17 03:52:00', 41);
+(132, 'Chương 2', '', 'upload/chap/manga/naruto/2/1.png,upload/chap/manga/naruto/2/naruto.jpg', '', '2024-11-17 03:52:00', 41),
+(136, 'Chương 4', '1231', 'upload/chap/manga/doraemon/4/doremon.jpg,upload/chap/manga/doraemon/4/logo.png', '', '2024-12-02 10:01:35', 39);
 
 -- --------------------------------------------------------
 
@@ -196,7 +196,8 @@ INSERT INTO `qq_historys` (`Id`, `Email`, `Arr_IdStory`) VALUES
 (23, 'nguyentrihoa99', '37'),
 (24, 'phongj88@gmail.com', '16,38,26,22'),
 (25, 'ccoderr1@gmail.com', '15,38,12,39,40,41,42'),
-(26, 'ccoderr2@gmail.com', '39,40');
+(26, 'ccoderr2@gmail.com', '39,40'),
+(27, 'tien@gmail.com', '39');
 
 -- --------------------------------------------------------
 
@@ -413,10 +414,15 @@ CREATE TABLE `qq_story` (
 --
 
 INSERT INTO `qq_story` (`Id`, `Name`, `NameOther`, `story_Status`, `Content`, `ImgAvatar`, `Badge`, `Waning`, `Author`, `Genre`, `NameEncodeGenres`, `Country`, `DateUpload`, `NameUpdate_Chap`, `DateUpdate_Chap`, `Female`, `Male`, `Sum_Subscribe`, `Sum_Like`, `Sum_Views`, `hide_view`, `prioritized`) VALUES
-(39, 'Doraemon', 'Doremon', 'Đang tiến hành', 'Doremon chú mèo máy đến từ tương lai !!', 'upload/story/190x247/doraemon-710384572672b30a518b8d.jpg', 'Hot', 'Thường', 'Fujiko F. Fujio', 'Hài Hước', 'hai-huoc', '', '2024-11-06 04:02:33', 'Chương 3', '2024-11-16 02:09:57', 0, 0, 49, 2, 8, 0, 0),
+(39, 'Doraemon', 'Doremon', 'Đang tiến hành', 'Doremon chú mèo máy đến từ tương lai !!', 'upload/story/190x247/doraemon-710384572672b30a518b8d.jpg', 'Hot', 'Thường', 'Fujiko F. Fujio', 'Hài Hước', 'hai-huoc', '', '2024-11-06 04:02:33', 'Chương 4', '2024-12-02 10:01:17', 0, 0, 49, 2, 17, 0, 0),
 (40, 'Onepice', 'Vua hải tặc', 'Đang tiến hành', 'Vua hải tặc', 'upload/story/190x247/onepice-837664075673865f0afa3d.jpg', 'Hot', 'Thường', 'Unknown', 'Thám Hiểm,Hài Hước,Action', 'tham-hiem,hai-huoc,action', 'Nhật Bản', '2024-11-16 04:26:57', 'Chương 1', '2024-11-16 16:36:20', 0, 0, 0, 1, 1, 0, 0),
 (41, 'Naruto', 'Naruto shipudan', 'Đang tiến hành', 'Naruto shipudan', 'upload/story/190x247/naruto-4330047996738f5607c4b4.jpg', 'New', 'Thường', 'Unknown', 'Action,Magic', 'action,magic', NULL, '2024-11-17 02:40:19', 'Chương 2', '2024-11-17 03:50:30', 0, 0, 0, 0, 2, 0, 0),
-(42, '7 viên ngọc rồng', 'Dragon Ball', 'Đang tiến hành', 'Songoku truy tìm 7 viên ngọc rồng', 'upload/story/190x247/7-vien-ngoc-rong-140868506673903d664a5c.jpg', 'Hot', 'Thường', 'Unknown', 'Action,Drama', 'action,drama', NULL, '2024-11-17 02:51:52', 'Chương 2', '2024-11-17 03:13:10', 0, 0, 0, 0, 3, 0, 0);
+(42, '7 viên ngọc rồng', 'Dragon Ball', 'Đang tiến hành', 'Songoku truy tìm 7 viên ngọc rồng', 'upload/story/190x247/7-vien-ngoc-rong-140868506673903d664a5c.jpg', 'Hot', 'Thường', 'Unknown', 'Action,Drama', 'action,drama', NULL, '2024-11-17 02:51:52', 'Chương 2', '2024-11-17 03:13:10', 0, 0, 0, 0, 3, 0, 0),
+(46, 'Cửu Thiên Kiếm Pháp', 'Cửu Thiên Kiếm Pháp', 'Đang tiến hành', 'Cửu Thiên Kiếm Pháp', 'upload/story/190x247/cuu-thien-kiem-phap-1211527016675de689cdabd.jpg', 'Hot', 'Thường', 'Tiếnn Võ', 'Kiếm Hiệp,Manhwa', 'kiem-hiep,manhwa', NULL, '2024-12-15 03:11:56', NULL, NULL, 0, 0, 0, 0, 0, 0, 0),
+(47, 'Xác Sống Cuối Cùng', 'Xác Sống Cuối Cùng', 'Đang tiến hành', 'Xác Sống Cuối Cùng', 'upload/story/190x247/xac-song-cuoi-cung-759400487675de72e07499.jpg', 'Hot', 'Thường', 'Tiếnn Võ', 'Drama,Manhwa', 'drama,manhwa', NULL, '2024-12-15 03:14:40', NULL, NULL, 0, 0, 0, 0, 0, 0, 0),
+(48, 'Last Paradise', 'Last Paradise', 'Đang tiến hành', 'Last Paradise', 'upload/story/190x247/last-paradise-1059411898675de79a79baf.jpg', 'Hot', 'Thường', 'Tiếnn Võ', 'Truyện Màu,Romance,Manhwa', 'truyen-mau,romance,manhwa', NULL, '2024-12-15 03:16:28', NULL, NULL, 0, 0, 0, 0, 0, 0, 0),
+(49, 'Tôi Chiến Đấu Một Mình', 'Tôi Chiến Đấu Một Mình', 'Đang tiến hành', 'Tôi Chiến Đấu Một Mình', 'upload/story/190x247/toi-chien-dau-mot-minh-1953197847675de7e308d03.jpg', 'Hot', 'Thường', '', 'Action,School Life,Lịch Sử', 'action,school-life,lich-su', NULL, '2024-12-15 03:17:41', NULL, NULL, 0, 0, 0, 0, 0, 0, 0),
+(50, 'Tôi Chiến Đấu Một Mình', 'Tôi Chiến Đấu Một Mình', 'Đang tiến hành', 'Tôi Chiến Đấu Một Mình', 'upload/story/190x247/toi-chien-dau-mot-minh-1379663952675de801dc830.jpg', 'Hot', 'Thường', 'Tiếnn Võ', 'Lịch Sử', 'lich-su', NULL, '2024-12-15 03:18:11', NULL, NULL, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -444,7 +450,6 @@ CREATE TABLE `qq_users` (
 INSERT INTO `qq_users` (`Id`, `Email`, `Password`, `LastName`, `FirstName`, `Birthday`, `Phone`, `Gender`, `Path`, `Level`) VALUES
 (37, 'vitcontho@gmail.com', '2b91be1ba40e9db4e340ef6cc145ec67abda4a70', 'Vịt', 'Còn Thở', '2001-01-01', '0986782411', '0', 'upload/avatar/160x160/1724666962630f36b63178e.jpg', 3),
 (40, 'hantu0010@gmail.com', '714b0df701ef2623b61fdb2e82516f7b19037cad', NULL, NULL, NULL, NULL, '1', 'upload/avatar/160x160/noavatar.png', 3),
-(42, 'hayen1523@gmail.com', '4f297b3f8693625fc78e3385d03ae8eb16680dfd', NULL, NULL, NULL, NULL, '1', 'upload/avatar/160x160/noavatar.png', 0),
 (43, 'admin3@gmail.com', '0db39be35cb71b80a4b784e75f48791c0ce2b627', NULL, NULL, NULL, NULL, '1', 'upload/avatar/160x160/noavatar.png', 3),
 (47, 'truyenhh17@gmail.com', '3c8630271d9d1b4bd62fde6050094113cfbb7198', NULL, NULL, NULL, NULL, '1', 'upload/avatar/160x160/noavatar.png', 0),
 (51, 'phamngocanh2205@gmai', 'f2490c0d141381d4a2cf178a8261fc9ca84067e7', NULL, NULL, NULL, NULL, '1', 'upload/avatar/160x160/noavatar.png', 0),
@@ -468,10 +473,10 @@ INSERT INTO `qq_users` (`Id`, `Email`, `Password`, `LastName`, `FirstName`, `Bir
 (81, 'pchi2009@gmail.com', '7c72227ebd3f95c6d2bf01fcff5d6deba402f3b2', 'Copemetruyentranh:3', '', '2004-07-11', '', '0', 'upload/avatar/160x160/14711547356319c3b2e5ff0.jpg', 0),
 (82, 'duyenlun611pv@gmail.', '20fe079d29111ca51a2eb6022b06f645e38ae4bb', NULL, NULL, NULL, NULL, '1', 'upload/avatar/160x160/noavatar.png', 0),
 (83, 'huanghui610@gmail.co', '1ccc12d75940f75e016217640b4789dc162afc0c', NULL, NULL, NULL, NULL, '1', 'upload/avatar/160x160/noavatar.png', 0),
-(84, 'nguyentrihoa99', '356a192b7913b04c54574d18c28d46e6395428ab', NULL, NULL, NULL, NULL, '1', 'upload/avatar/160x160/noavatar.png', 3),
-(93, 'phongj88@gmail.com', '762731545341d3cec584e2bc5b13b943401d6957', 'vo', 'tienn', '2004-02-01', '0344916255', '1', 'upload/avatar/160x160/86902901966f91b9cd324a.jpg', 3),
+(93, 'phongj88@gmail.com', '97aa7101359406babbe5f27240ad38a8d3bd2237', 'vo', 'tienn', '2004-02-01', '0344916255', '1', 'upload/avatar/160x160/86902901966f91b9cd324a.jpg', 3),
 (94, 'ccoderr1@gmail.com', '762731545341d3cec584e2bc5b13b943401d6957', 'tien', 'vo', '2004-01-02', '012391911', '0', 'upload/avatar/160x160/1557261352672822d4eff53.jpg', 3),
-(95, 'ccoderr2@gmail.com', '667a904ffb35a4e1f59b834c387626d73883cc55', NULL, NULL, NULL, NULL, '1', 'upload/avatar/160x160/noavatar.png', 0);
+(95, 'ccoderr2@gmail.com', '667a904ffb35a4e1f59b834c387626d73883cc55', NULL, NULL, NULL, NULL, '1', 'upload/avatar/160x160/noavatar.png', 0),
+(96, 'tien@gmail.com', '0a050839c313bda2a600bf323424233b284ff2aa', NULL, NULL, NULL, NULL, '1', 'upload/avatar/160x160/noavatar.png', 0);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -582,7 +587,7 @@ ALTER TABLE `qq_authors`
 -- AUTO_INCREMENT cho bảng `qq_chapter`
 --
 ALTER TABLE `qq_chapter`
-  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
+  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
 -- AUTO_INCREMENT cho bảng `qq_feedback`
@@ -606,7 +611,7 @@ ALTER TABLE `qq_genres`
 -- AUTO_INCREMENT cho bảng `qq_historys`
 --
 ALTER TABLE `qq_historys`
-  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT cho bảng `qq_likes`
@@ -630,13 +635,13 @@ ALTER TABLE `qq_minchapter`
 -- AUTO_INCREMENT cho bảng `qq_story`
 --
 ALTER TABLE `qq_story`
-  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT cho bảng `qq_users`
 --
 ALTER TABLE `qq_users`
-  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
