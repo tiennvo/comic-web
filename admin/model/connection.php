@@ -2471,6 +2471,17 @@ $sql="INSERT INTO qq_comments (Content,Avatar,Name,Title,Likes,DateComment,IdCha
 		}	
 		return $arr;
 	}
+	function GetListChapterByIdStory($Id){
+		$sql = "SELECT * FROM qq_chapter where IdStory = '$Id'";
+		//echo $sql;
+		$rr = mysqli_query($this->_conn,$sql);		
+		$arr = array();
+		while($a = mysqli_fetch_array($rr,MYSQLI_ASSOC))
+		{
+			$arr[] = $a;
+		}	
+		return $arr;
+	}
 	function GetListStoryForAuthor($Author){
 		$sql = "SELECT * FROM qq_story where Author like '%$Author%'";
 		//echo $sql;
@@ -2800,6 +2811,14 @@ $sql="INSERT INTO qq_comments (Content,Avatar,Name,Title,Likes,DateComment,IdCha
 	function DeleteGenreById($id){
 			$sql="DELETE FROM qq_genres WHERE Id = '$id'";
 			mysqli_query($this->_conn, $sql);		       
+	}
+	function DeleteChapByIdStr($idstr){
+		$sql="DELETE FROM qq_chapter WHERE IdStory = '$idstr'";
+		mysqli_query($this->_conn, $sql);		       
+	}
+	function DeleteStrById($idstr){
+		$sql="DELETE FROM qq_story WHERE Id = '$idstr'";
+		mysqli_query($this->_conn, $sql);		       
 	}
 	function DeleteUserById($id){
 		$sql="DELETE FROM qq_users WHERE Id = '$id'";

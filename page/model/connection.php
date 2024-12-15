@@ -1034,6 +1034,37 @@ class config
 		return $arr;//trả về mảng đã phân trang
 	
 	}
+
+	function GetFindAI($category_notcategory, $type)
+	{
+		$k="";
+		if($category_notcategory !="")
+		$k.=$category_notcategory;
+		$sql="SELECT * FROM qq_story ".$k." ORDER BY DateUpdate_Chap DESC";
+		$sql6=$sql;
+		
+		mysqli_query($this->_conn, "SET SQL_BIG_SELECTS = 1");
+		$r = mysqli_query($this->_conn,$sql);		
+		$arr = array();
+
+		while($a = mysqli_fetch_array($r,MYSQLI_ASSOC))
+		{
+			$arr[] = $a;
+		}
+		if($type=="total"){//trả vê tổng số dòng
+		
+			$r3 = mysqli_query($this->_conn,$sql6);		
+			$arr3 = array();
+			while($a3 = mysqli_fetch_array($r3,MYSQLI_ASSOC))
+			{
+				$arr3[] = $a3;
+			}
+		    return mysqli_num_rows($r3);
+		}
+			else
+		return $arr;//trả về mảng đã phân trang
+	
+	}
 	
 	function GetSortTop($country,$status,$sort,$date,$type,$item_per_page,$current_page)
 	{

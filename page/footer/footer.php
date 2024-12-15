@@ -1,8 +1,4 @@
 <?php
-	 //require_once('../model/connection.php'); 
-	 //require_once('../model/connection.php'); 
-	 // $db=new config();
-	 // $db->config();
 	 $listEmoji=$db->GetListEmoji(1);
 	 $listEmoji2=$db->GetListEmoji(0);
 	 $linkOption=siteURL();

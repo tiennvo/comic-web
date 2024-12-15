@@ -438,6 +438,29 @@ $(document).ready(function(){
   });
 });
 
+
+
+
+$(document).ready(function(){
+ 
+  
+  $("#listStory").on('click', '.btnDelete', function() {
+
+  var id=$(this).attr("data-id"); 
+  //$("#s"+id).remove();
+   if (confirm('Bạn có chắc muốn xoá Chap này ?. Không thể khôi phục lại')) {
+     $.ajax({     
+        url:'ajax/chap/delete.php',
+        type:'POST',
+        cache:false,
+        data:{'id':id},
+        success:function(kq){
+        console.log(kq);
+      }
+     })
+ }   
+ });
+});
 </script>
 	
 </body>

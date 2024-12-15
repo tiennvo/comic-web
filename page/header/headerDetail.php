@@ -194,10 +194,6 @@ if ($(window).width() > 1023) {
 <div class="modal login-modal">
     <div class="modal-background"></div>
     <div class="modal-content">
-        <!-- <span class="top-caption">
-            Dù ai di ngược về xuôi,<br/>
-            đến giờ đọc hãy vào iTruyenTranh.net
-        </span> -->
         <div>
             <!-- /.top-caption -->
             <div class="tabs-buttons">
@@ -308,7 +304,8 @@ if ($(window).width() > 1023) {
                         </div>
                     </div>
                     <!-- <a href="<?= $linkOption."truyen-tranh-hay.html"?>" class="navbar-item">Truyện Tranh</a> -->
-					<a href="<?= $linkOption."tim-kiem-nang-cao.html"?>" class="navbar-item">Tìm Truyện</a>
+					<a href="<?= $linkOption."tim-kiem-nang-cao.html"?>" class="navbar-item">Tìm Truyện Thủ Công</a>
+                    <a href="<?= $linkOption."tim-kiem-ai.html"?>" class="navbar-item">Tìm Truyện Với AI</a>
                     <a rel="nofollow" href="<?= $linkOption."lich-su.html"?>" class="navbar-item">Lịch Sử</a>
                     <!-- <a rel="nofollow" href="<?= $linkOption."truyen-dang-theo-doi.html"?>" class="navbar-item">Theo Dõi</a> -->
                 </div>

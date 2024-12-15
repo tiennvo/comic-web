@@ -325,6 +325,8 @@ function paginationEvent(per_page=5,page=1){
 							
 								 
 								 html1+=' <a class="btn btn-primary btn-sm" href="listChap.php?idStory='+k[0][i].Id+'" target="_blank"><i class="fas fa-list"></i></a></td>';
+
+                 html1+='<td><a href="javascript:void(0)" data-id="'+k[0][i].Id+'" class="btnDelete"><i class="fas fa-trash-alt"></i></a></td>';
 						  html1+='</tr>';
 					}
 				   html1+='</tbody>';
@@ -413,6 +415,27 @@ $(document).ready(function(){
   });
 });
 
+
+$(document).ready(function(){
+ 
+  
+ $("#listStory").on('click', '.btnDelete', function() {
+
+ var id=$(this).attr("data-id"); 
+ //$("#s"+id).remove();
+  if (confirm('Bạn có chắc muốn xoá Truyện này ?. Không thể khôi phục lại')) {
+    $.ajax({     
+       url:'ajax/story/delete.php',
+       type:'POST',
+       cache:false,
+       data:{'id':id},
+       success:function(kq){
+       console.log(kq);
+     }
+    })
+}   
+});
+});
 </script>
 	
 </body>

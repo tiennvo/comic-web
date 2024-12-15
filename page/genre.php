@@ -152,23 +152,7 @@ require_once('header/headerDetail.php');
                     </ul>
                 </td>
             </tr>
-            <tr>
-                <th>Quốc gia</th>
-                <td>
-                    <ul class="choose">
-                        <li><a class="<?php if($country1=="1")  echo "active";else echo ""; ?>" title="Truyện Trung Quốc" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?country=1<?= $c1?><?= $status?><?= $c2?><?= $sort?>">Trung Quốc</a>
-                        </li>
-                        <li><a class="<?php if($country1=="2")  echo "active";else echo ""; ?>" title="Truyện Việt Nam" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?country=2<?= $c1?><?= $status?><?= $c2?><?= $sort?>">Việt Nam</a>
-                        </li>
-                        <li><a class="<?php if($country1=="3")  echo "active";else echo ""; ?>" title="Truyện Hàn Quốc" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?country=3<?= $c1?><?= $status?><?= $c2?><?= $sort?>">Hàn Quốc</a>
-                        </li>
-                        <li><a class="<?php if($country1=="4")  echo "active";else echo ""; ?>" title="Truyện Nhật Bản" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?country=4<?= $c1?><?= $status?><?= $c2?><?= $sort?>">Nhật Bản</a>
-                        </li>
-                        <li><a class="<?php if($country1=="5")  echo "active";else echo ""; ?>" title="Truyện Mỹ" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?country=5<?= $c1?><?= $status?><?= $c2?><?= $sort?>">Mỹ</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+            
             <tr>
                 <th>Sắp xếp</th>
                 <td>

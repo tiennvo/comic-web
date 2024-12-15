@@ -2,10 +2,6 @@
 if (session_status() == PHP_SESSION_NONE) {
   session_start();
 }
-
-
-		// include($_SERVER['DOCUMENT_ROOT'].'/truyenqq/page/model/connection.php');
-		// include($_SERVER['DOCUMENT_ROOT'].'/truyenqq/page/function/function.php');
 		require_once('model/connection.php'); 
 		require_once('function/function.php'); 		
 		$db=new config();

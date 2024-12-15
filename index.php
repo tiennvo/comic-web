@@ -283,72 +283,25 @@ $ChapSlider=$linkOption.$the_loai.vn_str_filter($NameStory)."-".$muc3['IdStory']
                   </div> -->
                </div>
                <!-- /.latest -->
-               <div class="female">
+               <!-- <div class="female">
                   <div class="caption" id="list-female"><a href="<?php echo $linkOption;?>top-ngay.html"><span class="female-icon"></span>Top ngày</a></div>
                   <div class="tile is-ancestor">
                      <div class="tile is-vertical is-parent">
-						<?php
-						 $date=findTop("day");
-						 $arrFemaleIndex=$db->GetFemaleIndex($date);
-						 storiesList($arrFemaleIndex,$linkOption);
-						?>
-                        <!-- /.list-stories -->
+                        <?php
+                        $date=findTop("day");
+                        $arrFemaleIndex=$db->GetFemaleIndex($date);
+                        storiesList($arrFemaleIndex,$linkOption);
+                        ?>
                      </div>
                   </div>
-               </div>
-               <!-- /.female -->
-               
-               <!-- /.male -->
+               </div> -->
+
             </div>
             <div id="Top" class="scrollTop none" style="display: none;">
                <span><a href="index.html"><img src="<?php echo $linkOption1?>frontend/images/back-to-top-icon.png"></a></span>
             </div>
          </section>
-         <!-- /.main-content -->        
-         <!-- <div class="container quick-link">
-            <ul class="list-inline">
-               <li>
-                  <a href="index.html" title="Truyen tranh">
-                  <strong class="text-link">Truyen tranh</strong>
-                  </a>
-               </li>
-               <li>
-                  <a href="index.html" title="Truyện tranh">
-                  <strong class="text-link">Tieu thuyet</strong>
-                  </a>
-               </li>
-               <li>
-                  <a href="index.html" title="Truyen tranh online">
-                  <strong class="text-link">Truyen tranh online</strong>
-                  </a>
-               </li>
-               <li>
-                  <a href="index.html" title="Truyện tranh online">
-                  <strong class="text-link">Truyện tranh online</strong>
-                  </a>
-               </li>
-               <li>
-                  <a href="index.html" title="Doc truyen tranh">
-                  <strong class="text-link">Doc truyen tranh</strong>
-                  </a>
-               </li>
-               <li>
-                  <a href="index.html" title="Đọc truyện tranh">
-                  <strong class="text-link">Đọc truyện tranh</strong>
-                  </a>
-               </li>
-               <li>
-                  <a href="index.html" title="Manhua">
-                  <strong class="text-link">Manhua</strong>
-                  </a>
-               </li>
-               <li>
-                  <a href="index.html" title="Manga">
-                  <strong class="text-link">Manga</strong>
-                  </a>
-               </li>
-            </ul>
-         </div> -->
+         
            <?php	
 				require_once('page/footer/footerDetail.php');	
 			?> 

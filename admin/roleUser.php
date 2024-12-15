@@ -265,7 +265,7 @@ $linkOption=siteURL();
                 <input type="text" id="Email" class="form-control" value="<?php echo $user;?>" disabled=""/>
               </div>
              
-              <div class="form-group">
+              <div class="form-group" style="display: none;">
                 <label for="inputDescription">Quyền</label>
                 
                  <select id="Level" class="form-control custom-select">
